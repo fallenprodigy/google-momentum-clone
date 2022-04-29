@@ -1,4 +1,5 @@
 import React from "react";
+import { DateContainer } from "./DateStyles";
 
 const DateToday = () => {
   let today = new Date();
@@ -7,9 +8,9 @@ const DateToday = () => {
     today.getFullYear() + "/" + today.getMonth() + "/" + today.getDate();
 
   return (
-    <div>
+    <DateContainer>
       <p>{date}</p>
-    </div>
+    </DateContainer>
   );
 };
 

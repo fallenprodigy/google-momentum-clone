@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { WeatherContainer, Temp, City } from "./WeatherStyles";
 
 const url =
   "https://api.openweathermap.org/data/2.5/weather?q=Tbilisi&units=imperial&appid=c3511c4a959981dd064d41343c59edf3";
@@ -18,9 +19,10 @@ const Weather = () => {
   // console.log(data);
 
   return (
-    <div>
-      <p>{data.main.temp.toFixed(0)}</p>
-    </div>
+    <WeatherContainer>
+      <Temp>{data.main.temp.toFixed(0)}°</Temp>
+      <City>Georgia, Tbilisi</City>
+    </WeatherContainer>
   );
 };
 

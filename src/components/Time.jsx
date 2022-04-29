@@ -1,28 +1,29 @@
 import React from "react";
 import Moment from "react-moment";
 import "moment-timezone";
+import { Welcome, Greeting, TimeStamp } from "./TimeStyles";
 
 const Time = () => {
   let today = new Date();
 
   let greeting = () => {
     if (today.getHours() >= 5 && today.getHours() < 11) {
-      return "Good Morning, Soldier!";
+      return "Good Morning!";
     } else if (today.getHours() >= 11 && today.getHours() < 1) {
-      return "Good Afternoon, ma boy <3";
+      return "Good Afternoon!";
     } else if (today.getHours() >= 17 && today.getHours() < 24) {
-      return "Good Evening, You look amazing!";
+      return "Good Evening";
     } else {
       return "What are you doing up at this hour?";
     }
   };
   return (
-    <div>
-      <p>
+    <Welcome>
+      <TimeStamp>
         <Moment format="LT"></Moment>
-      </p>
-      <p>{greeting()}</p>
-    </div>
+      </TimeStamp>
+      <Greeting>{greeting()}</Greeting>
+    </Welcome>
   );
 };
 

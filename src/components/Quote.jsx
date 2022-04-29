@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import { QuoteContainer, Text } from "./QuoteStyles";
+
 const url = "https://api.quotable.io/random";
 
 const Quote = () => {
@@ -18,10 +20,10 @@ const Quote = () => {
   if (!quotes) return null;
 
   return (
-    <div>
-      <p>{quotes.content}</p>
-      <p>-{quotes.author}</p>
-    </div>
+    <QuoteContainer>
+      <Text>{quotes.content}</Text>
+      <Text>-{quotes.author}</Text>
+    </QuoteContainer>
   );
 };
 
