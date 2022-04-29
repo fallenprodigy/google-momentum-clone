@@ -1,5 +1,6 @@
 import React from "react";
-import DateToday from "./components/DateToday";
+import Date from "./components/Date";
+
 import Quote from "./components/Quote";
 import Time from "./components/Time";
 import Weather from "./components/Weather";
@@ -9,7 +10,7 @@ function App() {
     <div>
       <Weather />
       <Time />
-      <DateToday />
+      <Date />
       <Quote />
     </div>
   );
